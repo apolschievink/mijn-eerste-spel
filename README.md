@@ -74,3 +74,19 @@ externe scriptverwijzing te vervangen door de inhoud van `game.js` in een script
 Browsercontroles uitgevoerd: dieren selecteren, hernoemen, fokken, vachtkeuzes,
 uiterlijk bewaren, bandlevels, rijden/afstappen, zadelkeuzes bewaren,
 sprongen scoren, dressuurletters volgen en alle rijomgevingen laden.
+
+## Zelf sprongen bouwen
+
+Open **Springbak** en gebruik **Bouw je eigen parcours**. Selecteer een sprong
+om twee balkkleuren, de staanderkleur, hoogte (twee, drie of vier balken), breedte
+en positie te wijzigen. Voeg maximaal acht sprongen toe. Minstens één sprong
+blijft staan. Het parcours wordt apart in localStorage bewaard en blijft bestaan
+als je tussen rijplekken wisselt of de pagina ververst. De hoogte verandert de
+getekende hindernis; de bediening voor springen blijft gelijk.
+
+De spring- en dressuurbak hebben een witte omheining. De dressuurbak toont
+A, K, E, H, C, M, B en F op duidelijk omlijnde letterbordjes.
+
+Gecontroleerd in Chromium: wijzigingen in alle spronginstellingen, toevoegen en
+verwijderen, herstel na verversen, sprongherkenning op de gewijzigde locatie,
+dressuurletters, mobiel formaat en de bestaande fok- en rijacties.
