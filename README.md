@@ -43,7 +43,7 @@ Aaien geeft één bandpunt. Bewegen terwijl je op het dier rijdt geeft 0,2 punt.
 Iedere vijf punten stijgt de band een level, tot level 5: kennismaken,
 vriendjes, goede vrienden, beste maatjes en onafscheidelijk.
 
-Een nieuwe boerderij heeft tien dieren: twee per soort, inclusief paarden.
+Een nieuwe boerderij heeft twaalf dieren: twee per soort, inclusief paarden en koeien.
 Bestaande opgeslagen boerderijen houden hun dieren en krijgen twee paarden
 als die nog ontbreken. De dierenlijst blijft beschikbaar naast het veld.
 
@@ -142,3 +142,17 @@ rijdende gewone auto's, taxi's en politieauto's. Trams rijden over de rails.
 Het groene park is een aparte rijplek. Het verkeer is decoratief: er is nog
 geen verkeersregel- of botsingssimulatie. Bij verminderde beweging staan de
 voertuigen op hun routes stil.
+
+## Een dier meenemen aan een touw
+
+Op de boerderij staan nu ook twee koeien, Bella en Bontje, wanneer er voldoende
+plek is binnen de limiet van 40 dieren. Bestaande dieren blijven bewaard.
+Klik op een koe of ander dier en kies **Meenemen aan touw**. Je meisje staat
+naast het dier; loop met de pijltjes en het dier volgt aan een zichtbaar touw.
+Je kunt samen naar de stad, het park, het bos of een andere rijplek gaan.
+Met **Touw loslaten** stopt het volgen en blijft het dier op die plek staan.
+Je kunt één dier tegelijk meenemen. De actieve touwverbinding stopt als je de
+pagina vernieuwt; de diergegevens en de laatst opgeslagen plek blijven bewaard.
+
+`node tests/leading.cjs` controleert de koeien, meelopen door de stad,
+het zichtbare touw en het loslaten zonder dat het dier verdwijnt.
