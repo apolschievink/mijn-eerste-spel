@@ -187,3 +187,22 @@ voorpluk tussen de oren.
 
 `node tests/shops.cjs` controleert de manen, het café, drie winkels, binnen
 rondlopen, weer naar buiten gaan en het wachten/herstellen van een meegenomen dier.
+
+## Spelmunten en gebakjes
+
+Je begint met 50 spelmunten. Aaien levert twee munten op, maximaal eenmaal per
+dier per 30 seconden. De bakkerij verkoopt croissants (4), cupcakes (6) en
+appeltaart (8). Het café verkoopt koffie (3), muffins (5) en appeltaart (8).
+De ijssalon verkoopt ijsjes (4). Bedragen zijn spelmunten, geen echt geld.
+
+Ga naar binnen om het koopmenu te zien. Aankopen verschijnen in **Mijn tas**;
+klik op een product in de tas om het op te eten of op te drinken. Saldo en tas
+blijven via localStorage bewaard. Onvoldoende saldo verandert geen items of
+munten. Opnieuw beginnen herstelt ook de 50 startmunten en maakt de tas leeg.
+
+`node tests/wallet.cjs` controleert startgeld, de beloningspauze, aankopen,
+consumeren, bewaren na herladen en een aankoop met onvoldoende saldo.
+
+Een fotorealistisch paardenmodel is nog niet toegevoegd. De gevonden externe
+realistische asset had geen duidelijke gebruikslicentie; die asset is niet
+opgenomen in deze repository. Het huidige, zelfgemaakte paard blijft actief.
