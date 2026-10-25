@@ -53,7 +53,55 @@ function notice(message){$('notice').textContent=message;}
 function adult(a){return Date.now()-a.born>=60000;}
 function current(){return animals.find(a=>a.id===selected);}
 function portrait(){const hair={blond:'#efc65b',brown:'#754322',black:'#28232a',red:'#ba522e'}[outfit.hair];const pants=outfit.clothes==='jeans'?'#456f9c':outfit.pants;return `<span class="portrait"><svg viewBox="0 0 60 110" role="img" aria-label="Meisje met armen en benen, ${outfit.hair} haar en ${outfit.clothes==='jeans'?'spijkerbroek':'rijkleding'}"><ellipse cx="30" cy="107" rx="20" ry="3" fill="#0002"/><path d="M13 42 Q4 8 28 7 Q53 5 47 45L39 52L18 50Z" fill="${hair}"/><path d="M20 65L18 95L27 95L30 72L34 95L43 95L40 64Z" fill="${pants}" stroke="#0002"/><path d="M18 86L27 86L27 104L14 104L14 99L18 97ZM34 86L43 86L43 98L48 100L48 104L34 104Z" fill="${outfit.boots}"/><path d="M20 44L11 47L4 70L10 73L20 54M40 44L49 47L56 70L50 73L40 54" fill="${outfit.shirt}" stroke="#0002"/><circle cx="7" cy="73" r="4" fill="#efc4a4"/><circle cx="53" cy="73" r="4" fill="#efc4a4"/><path d="M20 43Q30 39 40 43L42 67L18 67Z" fill="${outfit.shirt}"/><path d="M25 37L25 45Q30 49 35 45L35 37" fill="#e6b38c"/><ellipse cx="30" cy="27" rx="15" ry="17" fill="#f5c8a4"/><path d="M14 24Q11 5 29 8Q48 7 46 25L35 16L17 27Z" fill="${hair}"/><circle cx="24" cy="28" r="1.5"/><circle cx="36" cy="28" r="1.5"/><path d="M25 35Q30 39 35 34" fill="none" stroke="#a35a56" stroke-width="1.8"/>${outfit.hat==='cap'?'<path d="M13 18Q13 0 30 2Q47 1 47 18Z" fill="#333c52"/><path d="M28 18L56 19L47 23L28 22Z" fill="#333c52"/>':outfit.hat==='cowboy'?'<path d="M16 16L19 2L29 6L39 2L44 17Z" fill="#af7845"/><path d="M3 13Q30 24 57 13L54 22Q30 29 6 22Z" fill="#bf8d54"/>':''}</svg></span>`;}
-function horseArt(coat={color:'white'},tack=null){const chestnut=coat.color==='chestnut',base=chestnut?'#b9784b':'#e5e0d5',light=chestnut?'#e8b885':'#fffef7',dark=chestnut?'#845033':'#b6aea0',mane=chestnut?'#643a2b':'#aaa398';return `<svg class="horse-art" viewBox="0 0 240 200" role="img" aria-label="${chestnut?'Vos':'Wit'} paard${coat.blaze?' met bles':''}${coat.spots?' met vlekken':''}"><defs><linearGradient id="body-${coat.color}" x1="15%" y1="0%" x2="65%" y2="100%"><stop stop-color="${light}"/><stop offset=".5" stop-color="${base}"/><stop offset="1" stop-color="${dark}"/></linearGradient></defs><ellipse cx="119" cy="186" rx="95" ry="7" fill="#243d3225"/><!-- far legs --><g fill="${dark}" stroke="${dark}" stroke-linejoin="round"><path d="M78 109C81 127 72 137 68 149L65 176L56 179L57 171L57 146L64 119Z"/><path d="M153 102L165 125L164 151L174 177L166 181L155 155L151 133L141 117Z"/></g><g fill="url(#body-${coat.color})" stroke="${dark}" stroke-width="1.3" stroke-linejoin="round"><!-- body, chest, rising neck and face --><path d="M44 98C41 84 48 72 61 69C78 65 88 73 108 77C123 80 138 79 146 68C155 55 158 37 171 28C177 24 183 25 188 29C192 33 192 39 196 44L209 56C214 61 213 66 207 68C201 69 197 65 192 61L181 52C180 76 175 97 163 113C151 129 131 135 110 136C92 138 75 134 63 127C50 120 44 112 44 98Z"/><!-- powerful shoulder --><path d="M148 84C161 87 163 108 153 123C149 130 148 137 149 147L154 175Q153 180 147 180L140 150C138 141 140 131 137 124C132 114 134 105 138 101"/><!-- hind leg with hock --><path d="M62 91C79 91 87 105 81 119C78 128 69 134 62 141L54 151L49 177Q45 181 39 179L43 148Q44 143 49 138L55 125C43 114 44 100 51 94"/><!-- ears --><path d="M172 30Q167 22 169 14Q176 17 180 27M183 28Q184 17 189 13Q193 21 190 31"/></g><!-- mane and tail --><path d="M174 26C160 28 154 47 150 59C148 68 145 74 140 79Q147 84 153 77C165 62 164 42 180 31Z" fill="${mane}"/><path d="M48 80C29 76 35 101 29 117C24 130 19 137 13 143C27 145 39 129 42 116C45 103 41 94 49 91Z" fill="${mane}"/><g stroke="${light}" stroke-width="1" opacity=".4" fill="none"><path d="M167 35Q157 56 148 72M164 39Q155 60 144 77M42 94Q36 125 23 135"/></g><!-- rounded flank volume and soft coat highlights --><ellipse cx="101" cy="103" rx="37" ry="23" fill="${light}" opacity=".06"/><ellipse cx="62" cy="96" rx="16" ry="19" fill="${light}" opacity=".07"/><!-- muscles and highlights --><path d="M59 80C76 72 89 85 111 86M53 97Q46 112 64 121M151 89Q163 103 149 117M174 40Q167 64 157 79" fill="none" stroke="${light}" stroke-width="2" opacity=".3"/><path d="M83 125Q109 137 135 125" fill="none" stroke="${dark}" opacity=".55"/>${coat.spots?'<g fill="#71513e" opacity=".92"><path d="M79 80Q101 75 105 90T88 103Q69 103 73 89Z"/><path d="M115 103Q130 93 136 109T119 122Z"/><path d="M51 97Q61 87 65 98T56 115Z"/></g>':''}${coat.blaze?'<path d="M187 32L191 34L190 45L207 59L201 65L186 49L184 40Z" fill="#fffdf5"/>':''}<!-- muzzle and expression --><path d="M201 54L209 56Q216 62 208 67Q204 69 200 65Z" fill="${chestnut?'#a07160':'#c1afa4'}"/><ellipse cx="208" cy="61" rx="2" ry="3" fill="#4d3a32"/><path d="M201 65Q206 67 210 65" stroke="#654c42" fill="none"/><path d="M184 38Q188 36 191 39" fill="none" stroke="${dark}"/><ellipse cx="188" cy="40" rx="2.2" ry="1.8" fill="#211e1b"/><circle cx="190" cy="39" r=".8" fill="white"/><!-- hooves --><g fill="#49433e"><path d="M39 174L49 174L51 182L37 183Z"/><path d="M56 175L65 174L68 181L54 182Z"/><path d="M146 175L155 174L159 182L146 183Z"/><path d="M166 175L175 174L179 181L166 182Z"/></g>${tack&&tack.model!=='none'?`<path d="M100 79Q121 84 140 79L142 110Q120 119 96 108Z" fill="${tack.pad}" stroke="#f7ead3" stroke-width="2"/><path d="M103 78Q122 89 140 76L141 ${tack.model==='dressage'?108:99}Q130 105 118 98L102 97Z" fill="${tack.color}" stroke="#3b2d24" stroke-width="2"/><path d="M121 96L119 130L132 130L131 122" fill="none" stroke="#9a9182" stroke-width="3"/><path d="M125 97L128 124" stroke="#5c4230" stroke-width="3"/>${tack.model==='western'?'<path d="M136 79L138 68L143 68" fill="none" stroke="#63402a" stroke-width="5"/>':''}<path d="M179 33L192 47L201 68M186 48L205 57M199 65Q163 83 134 86" fill="none" stroke="${tack.color}" stroke-width="2.5"/>`:''}</svg>`;}
+function horseArt(coat={color:'white'},tack=null){
+ const orange=coat.color==='chestnut',body=orange?'#e88c29':'#ece7db',shade=orange?'#c66a20':'#c9c0af',shine=orange?'#ffb650':'#fffaf0',mane=orange?'#b55315':'#928572',muzzle=orange?'#ffc56c':'#e4d0b4',ink='#57351f';
+ return `<svg class="horse-art" viewBox="0 0 240 200" role="img" aria-label="${orange?'Vos':'Wit'} paard${coat.blaze?' met bles':''}${coat.spots?' met vlekken':''}">
+ <ellipse cx="124" cy="188" rx="76" ry="5" fill="#253b2d20"/>
+ <g stroke="${ink}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+ <!-- flowing tail and the two legs behind the body -->
+ <path d="M172 99C185 81 211 86 209 109C208 122 199 135 209 147C191 150 188 136 191 121C195 102 185 101 178 111" fill="${mane}"/>
+ <path d="M181 98Q198 89 201 103C206 118 193 133 201 143" fill="none" stroke="${shine}" stroke-width="2"/>
+ <path d="M91 119C94 132 89 147 87 157L84 181L73 181L77 156L77 124Z" fill="${shade}"/>
+ <path d="M156 119C161 134 159 147 155 159L153 181L143 181L144 155L144 125Z" fill="${shade}"/>
+ <!-- one continuous rounded body and upright neck -->
+ <path d="M78 68C78 55 89 48 99 59C107 69 108 85 116 94C130 97 145 91 158 94C175 95 184 109 180 123C176 139 158 141 143 139C128 137 113 143 100 137C82 130 75 116 75 102C74 88 77 79 78 68Z" fill="${body}"/>
+ <path d="M93 103C91 120 104 130 121 133C143 136 163 131 174 123" fill="none" stroke="${shine}" stroke-width="3"/>
+ <!-- closer foreleg and hind leg -->
+ <path d="M95 129C100 140 97 153 95 160L94 182L82 182L84 158L83 138" fill="${body}"/>
+ <path d="M167 127Q178 133 173 147L165 160L166 182L154 182L154 157Q159 145 156 139" fill="${body}"/>
+ <path d="M85 158L94 159M155 157L165 160" fill="none" stroke="${shade}"/>
+ <!-- mane behind the expressive head -->
+ <path d="M87 49Q102 50 105 68L109 79L104 77L114 93L106 91L119 103Q100 105 94 86L83 68Z" fill="${mane}"/>
+ <path d="M98 63Q98 81 108 93" fill="none" stroke="${shine}" stroke-width="1.5"/>
+ <!-- big cheek, tapered nose and round muzzle -->
+ <path d="M65 48C67 34 84 31 94 44C108 60 101 78 90 87L74 100C67 107 54 103 52 94C49 85 56 76 56 67C56 58 59 52 65 48Z" fill="${body}"/>
+ <path d="M61 53Q58 63 59 72" stroke="${shine}" stroke-width="3" fill="none"/>
+ <!-- ears and forelock -->
+ <path d="M68 43C60 39 59 24 65 21C70 24 76 32 75 40" fill="${body}"/>
+ <path d="M83 43C81 33 84 22 91 21C96 30 92 41 89 46" fill="${body}"/>
+ <path d="M65 27L68 37M89 27L87 38" fill="none" stroke="${muzzle}" stroke-width="3"/>
+ <path d="M69 43Q70 33 83 37L79 42L85 43L75 50L76 44L67 49Z" fill="${mane}"/>
+ ${coat.blaze?'<path d="M76 49Q81 47 82 52L76 65L70 83L63 85L68 66Z" fill="#fffdf4" stroke="none"/>':''}
+ <!-- large eyes with highlights -->
+ <ellipse cx="62" cy="63" rx="4.6" ry="8" fill="white"/>
+ <ellipse cx="80" cy="63" rx="6.4" ry="9.6" fill="white"/>
+ <ellipse cx="62" cy="65" rx="2.6" ry="5.2" fill="#34251d" stroke="none"/>
+ <ellipse cx="79" cy="65" rx="3.5" ry="6" fill="#34251d" stroke="none"/>
+ <circle cx="80" cy="62" r="1.8" fill="white" stroke="none"/><circle cx="62" cy="63" r="1.2" fill="white" stroke="none"/>
+ <path d="M76 50Q82 47 86 51M59 52L63 50" fill="none"/>
+ <path d="M57 82C46 82 44 94 51 101C58 109 72 108 77 98C82 89 72 81 65 83Z" fill="${muzzle}"/>
+ <ellipse cx="53" cy="89" rx="1.5" ry="2.4" fill="${ink}" stroke="none"/><ellipse cx="65" cy="90" rx="1.6" ry="2.6" fill="${ink}" stroke="none"/>
+ <path d="M56 101Q65 104 71 99" fill="none" stroke-width="1.3"/>
+ ${coat.spots?'<g fill="#87502d" stroke="none"><path d="M122 101Q137 94 140 107T126 121Q116 114 122 101Z"/><path d="M150 119Q166 112 167 125Q158 137 149 130Z"/></g>':''}
+ <!-- four dark brown hooves -->
+ <path d="M74 175L85 176L85 184Q79 188 71 184Z" fill="#68432b"/>
+ <path d="M83 177L94 177L96 186Q89 190 80 186Z" fill="#68432b"/>
+ <path d="M143 176L153 176L155 184Q149 187 141 184Z" fill="#68432b"/>
+ <path d="M154 177L166 177L169 186Q160 189 152 186Z" fill="#68432b"/>
+ ${tack&&tack.model!=='none'?`<path d="M117 95Q133 100 150 95L153 122Q133 129 114 121Z" fill="${tack.pad}" stroke="#f7ead3" stroke-width="2"/><path d="M119 95Q134 104 150 94L150 ${tack.model==='dressage'?119:113}Q137 120 126 113L118 111Z" fill="${tack.color}"/><path d="M134 112L133 141L144 141L143 133" fill="none" stroke="#9a9182" stroke-width="2.5"/><path d="M138 115L138 136" stroke="${tack.color}" stroke-width="3"/>${tack.model==='western'?'<path d="M120 99L119 88L114 88" fill="none" stroke="#63402a" stroke-width="4"/>':''}<path d="M93 47L80 83L74 99M57 81L76 91M77 97Q95 115 121 104" fill="none" stroke="${tack.color}" stroke-width="2"/>`:''}
+ </g></svg>`;
+}
+
 function bond(a){return Math.min(5,1+Math.floor(a.love/5));}
 function choose(a){if(riding&&riding!==a.id){notice('Stap eerst af om een ander dier te kiezen.');return;}selected=a.id;$('animal-name').value=a.name;const t=a.tack||{model:'dressage',color:'#704732',pad:'#ba7a9e'};$('saddle').value=t.model;$('saddle-color').value=t.color;$('pad-color').value=t.pad;render();}
 function render(){
