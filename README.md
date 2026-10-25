@@ -117,3 +117,9 @@ Maak na bronwijzigingen de optionele enkelbestandsversie opnieuw met
 De test gebruikt software-WebGL en controleert camera-orbit en zoom, de zittende
 ruiter, doorrijden met cameravolging, stad/park, fokken, zadels, dressuur,
 sprongen, bewaren van voortgang en de mobiele pagina-indeling.
+
+De 3D-paarden hebben nu gladde, doorlopende oppervlakken voor romp, hals en
+hoofd, een subtiele vachtstructuur, kleinere ogen en gevormde hoeven.
+De stad heeft ramen met kozijnen, kruisroeden, reflecties en vensterbanken
+op alle gevels. Rond het aparte park staan ook huizen met ramen. De raamonderdelen
+worden samen getekend met instancing om veel losse tekenaanroepen te voorkomen.
