@@ -107,7 +107,7 @@ de eenvoudige 2D-weergave beschikbaar, met een melding bij de camerabediening.
   je naar het beginpunt van die plek.
 - De ruiter zit met gebogen knieën op het paard. De zon staat hoog in de lucht.
 - De stad bevat wandelende mensen, winkelgevels en een vrij toegankelijk park.
-  De winkels zijn voorlopig decor met naambordjes; er is geen koopfunctie.
+  Je kunt de winkels en het café binnengaan; er is nog geen koopfunctie.
 - De 3D-modellen zijn gestileerde, ronde figuren. Dit is een eerste speelbare
   3D-versie, geen fotorealistische simulatie.
 
@@ -169,3 +169,21 @@ blijven de gangknoppen uitgeschakeld.
 
 `node tests/gaits.cjs` controleert de knoppen, automatisch lopen, de oplopende
 snelheden van stap/draf/galop, Halt en afstappen.
+
+
+## Winkels en cafés bezoeken
+
+Ga naar **Stad**. Klik op een winkel of café in de 3D-wereld, of kies de naam
+in **Winkels en cafés** en klik op **Naar binnen**. Binnen kun je met de pijltjes
+rondlopen. Het café heeft tafels, stoelen, kopjes en een toonbank; de winkels
+hebben bijpassende uitgestalde spullen. Klik op de groene uitgang, loop ernaartoe
+of kies **Terug naar het plein** om buiten te komen. De toets E werkt ook voor
+binnen- en buitengaan, behalve wanneer je in een invoerveld bezig bent.
+
+Je stapt af voordat je binnengaat. Een dier aan een touw wacht buiten en
+loopt na terugkeer weer met je mee. Je kunt binnen niets kopen of bestellen.
+De paarden hebben nu ook een duidelijkere manenkam, hangende lokken en een
+voorpluk tussen de oren.
+
+`node tests/shops.cjs` controleert de manen, het café, drie winkels, binnen
+rondlopen, weer naar buiten gaan en het wachten/herstellen van een meegenomen dier.
