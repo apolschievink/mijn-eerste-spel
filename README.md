@@ -90,3 +90,30 @@ A, K, E, H, C, M, B en F op duidelijk omlijnde letterbordjes.
 Gecontroleerd in Chromium: wijzigingen in alle spronginstellingen, toevoegen en
 verwijderen, herstel na verversen, sprongherkenning op de gewijzigde locatie,
 dressuurletters, mobiel formaat en de bestaande fok- en rijacties.
+
+## 3D-proefversie
+
+De hoofdversie gebruikt nu een echte WebGL-scène met meegeleverde Three.js
+0.160.1 (MIT; licentie in `vendor/THREE-LICENSE.txt`). Er zijn geen CDN-aanvragen
+of installaties nodig om te spelen. Bij ontbrekende WebGL-ondersteuning blijft
+de eenvoudige 2D-weergave beschikbaar, met een melding bij de camerabediening.
+
+- Sleep met de muis of één vinger om rond te kijken; scroll om te zoomen.
+- **Camera terugzetten** herstelt de beginhoek.
+- Houd pijltjestoetsen of WASD ingedrukt om vanuit de kijkrichting te bewegen.
+  De schermpijlen kunnen ook ingedrukt worden gehouden.
+- De camera volgt je. Bos, strand, stad en park hebben geen oude veldgrens;
+  de omgeving wordt tijdens het reizen aangevuld. Wisselen van rijplek brengt
+  je naar het beginpunt van die plek.
+- De ruiter zit met gebogen knieën op het paard. De zon staat hoog in de lucht.
+- De stad bevat wandelende mensen, winkelgevels en een vrij toegankelijk park.
+  De winkels zijn voorlopig decor met naambordjes; er is geen koopfunctie.
+- De 3D-modellen zijn gestileerde, ronde figuren. Dit is een eerste speelbare
+  3D-versie, geen fotorealistische simulatie.
+
+Maak na bronwijzigingen de optionele enkelbestandsversie opnieuw met
+`python3 build-standalone.py`. Start de lokale server zoals hierboven en voer
+`node tests/browser.cjs` uit wanneer Playwright en Chromium beschikbaar zijn.
+De test gebruikt software-WebGL en controleert camera-orbit en zoom, de zittende
+ruiter, doorrijden met cameravolging, stad/park, fokken, zadels, dressuur,
+sprongen, bewaren van voortgang en de mobiele pagina-indeling.
