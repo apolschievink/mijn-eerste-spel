@@ -156,3 +156,16 @@ pagina vernieuwt; de diergegevens en de laatst opgeslagen plek blijven bewaard.
 
 `node tests/leading.cjs` controleert de koeien, meelopen door de stad,
 het zichtbare touw en het loslaten zonder dat het dier verdwijnt.
+
+## Stap, draf en galop
+
+Stap eerst op een volwassen dier met **Rijden**. Kies daarna **Stap**, **Draf**
+of **Galop**. Het dier beweegt vanzelf verder in zijn rijrichting. De pijltjes
+of WASD bepalen een nieuwe richting vanuit de camera; alleen rondkijken met de
+muis verandert de rijrichting niet. Elke gang heeft een eigen snelheid en
+beenbeweging. **Halt**, afstappen, een andere rijplek kiezen of het tabblad
+verlaten stopt het automatisch doorrijden. Als je een dier aan een touw meeneemt,
+blijven de gangknoppen uitgeschakeld.
+
+`node tests/gaits.cjs` controleert de knoppen, automatisch lopen, de oplopende
+snelheden van stap/draf/galop, Halt en afstappen.
