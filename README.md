@@ -123,3 +123,22 @@ hoofd, een subtiele vachtstructuur, kleinere ogen en gevormde hoeven.
 De stad heeft ramen met kozijnen, kruisroeden, reflecties en vensterbanken
 op alle gevels. Rond het aparte park staan ook huizen met ramen. De raamonderdelen
 worden samen getekend met instancing om veel losse tekenaanroepen te voorkomen.
+
+Het bos heeft één open plek bij het beginpunt, met een smal kronkelend pad en
+veel dichte begroeiing eromheen. De bomen, struiken, varens en bloemen worden
+in groepen getekend, zodat ook verder rijden mogelijk blijft. Er zijn geen
+voorbijgangers in het bos. De 34 vlinders vliegen in 3D met bewegende vleugels.
+
+De paarden hebben kortere oren, rondere ogen, een zichtbare bles op het eigen
+hoofdoppervlak, duidelijkere manen en volle staarten vanaf de achterhand.
+Elk been is één doorlopend gevormd oppervlak dat de hoef overlapt. Varkens hebben
+oren, een snuit en krulstaart; katten hebben puntoren, snorharen en een staart;
+konijnen hebben roze binnenoren en een staartje; kippen hebben kammen, vleugels,
+een snavel en staartveren.
+
+De stad bestaat nu uit betegelde pleinen met een fontein, bankjes en acht
+winkelgevels per bouwblok. Rond de pleinen liggen straten met zebrapaden,
+rijdende gewone auto's, taxi's en politieauto's. Trams rijden over de rails.
+Het groene park is een aparte rijplek. Het verkeer is decoratief: er is nog
+geen verkeersregel- of botsingssimulatie. Bij verminderde beweging staan de
+voertuigen op hun routes stil.
