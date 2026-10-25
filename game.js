@@ -6,7 +6,7 @@ let outfit={hair:'blond',hat:'none',clothes:'riding',shirt:'#9b6bac',pants:'#f0d
 try{const saved=JSON.parse(localStorage.getItem('boerderij-outfit'));if(saved&&['blond','brown','black','red'].includes(saved.hair)&&['none','cap','cowboy'].includes(saved.hat))outfit={...outfit,...saved};}catch{}
 let scene='farm',jumping=false,jumps=0,dressageStep=0;
 const dressageRoute=['A','K','E','H','C','M','B','F'];
-const letterPoints={A:[50,88],K:[14,74],E:[14,50],H:[14,25],C:[50,13],M:[86,25],B:[86,50],F:[86,74]};
+const letterPoints={A:[50,88],K:[86,74],E:[86,50],H:[86,25],C:[50,13],M:[14,25],B:[14,50],F:[14,74]};
 const courseKey='boerderij-course-v1';
 let obstacleIndex=0;
 const defaultCourse=()=>[[25,35,'#b94c5e'],[58,55,'#547fcb'],[30,73,'#a06bb7']].map(([x,y,color])=>({x,y,width:19,height:'medium',color,color2:'#fffaf0',post:'#fffaf0'}));
