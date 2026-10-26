@@ -237,3 +237,22 @@ en fokmogelijkheden. Een nieuw spel begint met zestien dieren. Bestaande
 spelgegevens krijgen de nieuwe soorten zolang er ruimte is (maximaal 40).
 De paardenogen zijn kleiner en donkerder; het paard is nog niet fotorealistisch.
 Controle: `node tests/stable.cjs` (lokale server, Playwright en Chromium).
+
+## Paard naar fotovoorbeeld en door zee lopen (3d-10)
+
+Het paardenlijf, de schouders, hals en kaak vormen nu één glad gemodelleerd
+oppervlak. De benen hebben duidelijkere knieën, sprongen en aangesloten hoeven.
+De vacht krijgt fijne structuur en een zachte glans; manen, voorlok en volle
+staart bestaan uit taps toelopende haarlokken. Haargeometrie wordt gedeeld en
+per materiaal gebundeld. Bles, vlekken, zadels en ruiter blijven beschikbaar.
+De meegegeven paardenfoto is gebruikt als vormreferentie, niet als textuur
+of extern 3D-model. Dit blijft een zelfgemaakt 3D-model; geen fotorealistische scan.
+
+De ondiepe zee ligt vast vanaf wereld-z -8 en loopt door bij reizen. Water
+is doorschijnend blauw, met bewegende golven en losse schuimkoppen. Tijdens
+lopen of rijden door zee ontstaan uitdijende kringen en spetters. Galop geeft
+hogere spetters. Er is een vaste pool van 16 kringen en 48 druppels; effecten
+verdwijnen buiten het strand en bij verminderde beweging. De bodem blijft
+ondiep; zwemmen is niet toegevoegd.
+
+Controles: `node tests/horse-sea.cjs` en `node tests/beach.cjs`.
