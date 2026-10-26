@@ -273,3 +273,51 @@ geen tweede botsing verwerkt. De controle gebruikt relatieve beweging van
 speler en voertuigen en houdt rekening met het doorlopen van de rijroutes.
 
 Controles: `node tests/benches.cjs` en `node tests/city-life.cjs`.
+
+## Knus park, honden, staldeuren en samen spelen (3d-13)
+
+Het park heeft een grote bewegende fontein in het midden, zes zitbankjes
+rond het centrale deel, vier bloemperken en vijf wandelaars met honden
+aan de lijn. Huizen hebben botsingsvlakken: lopen, rijden en klikken op
+de grond laten je niet door een huis heen gaan. Er zijn ook extra bankjes
+buiten het centrale deel van het park. Bloemen worden per materiaal
+gebundeld om het park ook op kleinere apparaten bruikbaar te houden.
+
+Bobby en Luna zijn nieuwe eigen honden. Ze kunnen een naam krijgen, worden
+verzorgd, gefokt en aan het touw meegenomen. Ze hebben een mand in de stal.
+Een nieuw spel heeft achttien dieren. Bestaande dieren en namen blijven
+bewaard; de capaciteit is verhoogd naar 48 om ruimte voor de honden te maken.
+
+Je begint voor de staldeur. Klik op de deur of gebruik de deurtjesknoppen,
+loop naar binnen via het middenpad en open de deurtjes van de verblijven.
+Gesloten deuren en wanden blokkeren ook klikken door de muur heen.
+
+Bij **Samen spelen** maakt één speler een kamer. Deel de link, de QR-code
+of de kamercode; maximaal vier spelers kunnen meedoen op eigen apparaten.
+Vrienden zien elkaars poppetje, kleding en bereden dier bewegen. **Ga erheen**
+brengt je bij een vriend. Staldeurtjes worden tussen spelers gedeeld.
+Iedere speler houdt zijn eigen dieren, tas en spelmunten; die worden niet
+door andermans opgeslagen spel vervangen. De maker moet de kamer openhouden.
+
+Multiplayer gebruikt PeerJS 1.5.5 met de openbare PeerJS-signaleringsdienst
+en de standaard openbare STUN/TURN-diensten, inclusief TURN over TCP.
+Er is geen betaald account of eigen backend nodig. Beschikbaarheid en
+verbindingen hangen af van die diensten en het netwerk. Externe verbindingen
+naar de openbare dienst zijn in deze uitvoeromgeving geblokkeerd; de tests
+gebruiken echte WebRTC-verbindingen via lokale signalering en TURN/TCP.
+PeerJS en de QR-generator zijn lokaal meegeleverd met hun MIT-licenties.
+
+Een openbare QR-pagina staat op `qr.html`; de afbeelding is `qr-code.png`.
+
+Controles: `node tests/cozy-park.cjs`, `node tests/stable-doors.cjs`. Voor
+de multiplayerproef start je naast de gewone webserver de lokale testdiensten:
+
+```sh
+npm install --prefix /tmp/farm-peer-test --cache /tmp/farm-npm-cache peer@1.0.2 node-turn@0.0.6 --ignore-scripts --no-audit --no-fund
+NODE_PATH=/tmp/farm-peer-test/node_modules node tests/rtc-server.cjs
+node tests/multiplayer.cjs
+```
+
+De testdiensten zijn alleen voor lokale controles; de gepubliceerde website
+gebruikt de openbare diensten. `multiplayer.js` bevat foutmeldingen voor een
+onbereikbare kamer, een volle kamer, een netwerkfout en een gesloten kamer.
