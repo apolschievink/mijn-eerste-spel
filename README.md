@@ -225,3 +225,15 @@ Er zijn geen voorbijgangers. Animaties respecteren verminderde beweging.
 
 Controles: `node tests/clarity.cjs`, `node tests/forest-path.cjs` en
 `node tests/beach.cjs` (lokale server en Playwright/Chromium vereist).
+
+## Stal en nieuwe dieren (3d-9)
+
+De boerderij is nu een opengewerkte schuur: acht verblijven per diersoort,
+een middenpad, houten wanden, dakbalken, stro, voer en water. Het dak is
+opengewerkt zodat de camera dieren niet verbergt. Rustende dieren staan
+bij hun eigen soort; dieren aan het touw en bereden paarden blijven vrij.
+Schapen en ezels hebben eigen 3D-modellen, namen en dezelfde verzorging
+en fokmogelijkheden. Een nieuw spel begint met zestien dieren. Bestaande
+spelgegevens krijgen de nieuwe soorten zolang er ruimte is (maximaal 40).
+De paardenogen zijn kleiner en donkerder; het paard is nog niet fotorealistisch.
+Controle: `node tests/stable.cjs` (lokale server, Playwright en Chromium).
