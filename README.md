@@ -206,3 +206,22 @@ consumeren, bewaren na herladen en een aankoop met onvoldoende saldo.
 Een fotorealistisch paardenmodel is nog niet toegevoegd. De gevonden externe
 realistische asset had geen duidelijke gebruikslicentie; die asset is niet
 opgenomen in deze repository. Het huidige, zelfgemaakte paard blijft actief.
+
+## Scherper beeld, ruiterpad en strand
+
+Bij **Beeldkwaliteit** kies je **Scherp**, **Extra scherp** of **Sneller**.
+De keuze wordt bewaard. De weergave ondersteunt tot 3× schermresolutie en
+past de tekenresolutie opnieuw aan bij vergroten, verkleinen of schermzoom.
+Tekstbordjes worden ook met meer detail getekend.
+
+Het bos heeft een lichtbruin, geelachtig ruiterpad van ongeveer 3,4 meter breed.
+Het pad kronkelt door het groen en loopt door bij verder rijden. Begroeiing
+blijft naast het pad; vlinders vliegen eroverheen. De begincamera staat lager
+om onder de boomkruinen door te kijken.
+
+Het strand heeft duinen, wuivende golfkoppen, een golvend 3D-wateroppervlak,
+een warme zonsondergang en drie dolfijnen die af en toe een sprong maken.
+Er zijn geen voorbijgangers. Animaties respecteren verminderde beweging.
+
+Controles: `node tests/clarity.cjs`, `node tests/forest-path.cjs` en
+`node tests/beach.cjs` (lokale server en Playwright/Chromium vereist).
