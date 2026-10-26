@@ -153,9 +153,9 @@
  const front=cz<0?-1.85:1.85;for(const side of [-1,1]){box(pen,'#96724c',cx+side*2.55,.5,front,2,.95,.15);box(pen,'#68472d',cx+side*2.55,1.05,front,2,.12,.18);}
  box(pen,'#765238',cx+2.3,.35,cz+(cz<0?-2.3:2.3),1.3,.65,.7);box(pen,'#77aabe',cx+2.3,.69,cz+(cz<0?-2.3:2.3),1.05,.03,.48);
  box(pen,'#bea05d',cx-2.3,.35,cz+(cz<0?-2.3:2.3),1.2,.6,.7);
- shopSign(species[type].label,cx,2.3,front,pen);
+ shopSign(species[type].label,cx,2.15,front,pen).scale.set(3,.7,1);
  }shopSign('Stal · middenpad',0,3.5,-8.8);
- if(oldScene!=='farm'){yaw=0;pitch=.55;distance=16;}
+ if(oldScene!=='farm'){yaw=0;pitch=.6;distance=24;}
  }
  function environment(){clearSetting();sun.visible=scene!=='interior';world.background=scene==='beach'?sunsetSky:new T.Color(scene==='interior'?'#eadfc9':'#a9d4e9');skyLight.color.set(scene==='beach'?'#ffd4ad':'#fff5df');light.color.set(scene==='beach'?'#ffbe87':'#fff0c5');sun.material.color.set(scene==='beach'?'#ffd39a':'#fff5b9');sun.scale.setScalar(scene==='beach'?1.6:1);world.fog.color.set(scene==='forest'?'#819b73':scene==='beach'?'#e4ad8e':'#a9d4e9');world.fog.near=scene==='forest'?25:65;world.fog.far=scene==='forest'?85:150;windowParts.clear();windowCount=0;const target=animals.find(a=>a.id===riding)||player;const centerX=Math.floor((target.x-50)*.36/40)*40,centerZ=Math.floor((target.y-50)*.22/40)*40;groundMaterial.color.set(scene==='beach'?'#ead39d':scene==='forest'?'#7c9b64':scene==='farm'?'#90b86a':scene==='city'?'#ada99e':scene==='interior'?'#d9cbb4':'#a6bc7c');
  if(scene==='jump'||scene==='dressage'){box(setting,'#d8bb8f',0,.015,0,30,.04,18);for(const z of [-9,9]){for(const y of [.65,1.15])box(setting,'#fff7e5',0,y,z,30,.12,.1);for(let x=-15;x<=15;x+=3)box(setting,'#fff7e5',x,.7,z,.16,1.5,.16);}for(const x of [-15,15]){for(const y of [.65,1.15])box(setting,'#fff7e5',x,y,0,.1,.12,18);for(let z=-9;z<=9;z+=3)box(setting,'#fff7e5',x,.7,z,.16,1.5,.16);}
