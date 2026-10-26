@@ -256,3 +256,20 @@ verdwijnen buiten het strand en bij verminderde beweging. De bodem blijft
 ondiep; zwemmen is niet toegevoegd.
 
 Controles: `node tests/horse-sea.cjs` en `node tests/beach.cjs`.
+
+## Bankjes, fontein en verkeer (3d-12)
+
+In stad en park kun je bankjes aanklikken of de knop ‘Op een bankje zitten’
+gebruiken. De speler zit met gebogen benen op de zitting. Met Opstaan, de
+pijltjes of een klik op de grond ga je verder. Stap eerst van je dier af.
+Wisselen van omgeving, een winkel binnengaan en opnieuw beginnen maken
+de zithouding ongedaan. De pose is tijdelijk en verandert opgeslagen dieren niet.
+
+De stadsfonteinen hebben waterstralen, bewegende druppels en kringen in
+het bassin. Verkeer kan de speler en het bereden dier raken: bij een botsing
+stopt de beweging en word je op de stoep gezet, met een waarschuwing. Er
+verdwijnen geen dieren of spelmunten. Tijdens de korte afkoelperiode wordt
+geen tweede botsing verwerkt. De controle gebruikt relatieve beweging van
+speler en voertuigen en houdt rekening met het doorlopen van de rijroutes.
+
+Controles: `node tests/benches.cjs` en `node tests/city-life.cjs`.
